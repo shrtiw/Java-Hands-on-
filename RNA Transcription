@@ -1,0 +1,28 @@
+class RnaTranscription {
+
+    String transcribe(String dnaStrand) {
+        String rnaStrand = "";
+        for(int i = 0; i < dnaStrand.length(); i++)
+        {
+            char curr = dnaStrand.charAt(i);
+            if(curr == 'G')
+            {
+                curr = 'C';
+            }
+            else if(curr == 'C')
+            {
+                curr = 'G';
+            }
+            else if(curr == 'T')
+            {
+                curr = 'A';
+            }
+            else if(curr == 'A')
+            {
+                curr = 'U';
+            }
+            rnaStrand = rnaStrand + curr;
+        }
+        return rnaStrand;
+    }
+}
